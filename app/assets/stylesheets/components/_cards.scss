@@ -1,0 +1,42 @@
+.funky-card {
+
+}
+.funky-card-search {
+  padding-top: 10px;
+  overflow: hidden;
+  background: white;
+  img {
+    border-radius: 4px;
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+  };
+}
+.funky-card-search-info {
+  padding: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  h3 {
+    color: rgba(5, 4, 1, 0.5);
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  };
+  h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+  };
+  p {
+    font-size: 12px;
+    opacity: .7;
+    margin: 0;
+  };
+}
+.funky-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
