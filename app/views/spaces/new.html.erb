@@ -1,2 +1,15 @@
 <h1>Spaces#new</h1>
 <p>Find me in app/views/spaces/new.html.erb</p>
+
+<%= simple_form_for(@space) do |f| %>
+<%= f.input :name %>
+<%= f.input :description %>
+<%= f.input :price %>
+<%= f.input :capacity%>
+<%= f.input :amenities %>
+<%= f.input :space_type %>
+<%= f.input :location %>
+<%= f.button :submit %>
+<% end %>
+<br>
+<%= link_to 'Back', spaces_path %>

@@ -1,2 +1,7 @@
 <h1>Spaces#search</h1>
 <p>Find me in app/views/spaces/search.html.erb</p>
+
+<% @results.each do |result| %>
+<%= result.name %>
+<br>
+<% end %>

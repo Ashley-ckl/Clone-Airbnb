@@ -2,3 +2,11 @@
 <p>Find me in app/views/spaces/index.html.erb</p>
 
 
+<% @spaces.each do |space| %>
+<%= link_to space.name, space %>
+<br>
+<% end %>
+
+
+<br>
+<%= link_to 'Add Spaces', new_space_path %>
