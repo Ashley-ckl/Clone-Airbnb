@@ -1,12 +1,21 @@
-.navbar-lewagon {
+.navbar-funky-space {
   justify-content: space-between;
   background: white;
+  margin: 0px;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-funky-space .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-funky-space .navbar-brand img {
+  width: 150px;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  a {
+    margin-right: 30px;
+  }
 }
