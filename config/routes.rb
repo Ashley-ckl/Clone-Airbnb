@@ -7,7 +7,7 @@ Rails.application.routes.draw do
       get 'search'
     end
     resources :reviews, only: [:new, :create]
-    resources :bookings, only: [:new, :create] do
+    resources :bookings, only: [:index, :new, :create] do
       resources :payments, only: [:new, :create]
     end
   end
