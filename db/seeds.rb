@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts "Creating spaces..."
+Space.create(capacity: 5, price: 10, amenities: "some text", name: "Mango", type: "garage", location: "barcelona")
+
+
+puts "Spaces created, finished..."
