@@ -4,7 +4,7 @@
 <%= simple_form_for(@space) do |f| %>
 <%= f.input :name %>
 <%= f.input :description %>
-<%= f.input :price %>
+<%= f.input :price_per_hour %>
 <%= f.input :capacity, collection: ["less than 20", "20 to 50", "100 to 200", "200 to 500", "500+"] %>
 <%= f.input :amenities %>
 <%#= f.input :space_type %>
