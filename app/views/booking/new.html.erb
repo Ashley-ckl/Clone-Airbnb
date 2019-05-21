@@ -1,2 +1,12 @@
-<h1>Booking#new</h1>
-<p>Find me in app/views/booking/new.html.erb</p>
+<h1>book a room</h1>
+
+<div class=" form border p-4 text-white">
+  <%= simple_form_for(@cocktail) do |f| %>
+    <%= f.input :start_date %>
+    <%= f.input :end_date %>
+    <%= f.button :submit, class: "btn-primary" %>
+  <% end %>
+</div>
+
+
+
