@@ -1,2 +1,5 @@
 <h1>Index#create</h1>
 <p>Find me in app/views/booking/index.html.erb</p>
+<% @bookings.each do |booking| %>
+<%= booking.name%>
+<% end %>
