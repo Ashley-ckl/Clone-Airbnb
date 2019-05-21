@@ -8,6 +8,7 @@
 
 Space.destroy_all
 User.destroy_all
+Booking.destroy_all
 
 
 meder = User.create!(
@@ -37,10 +38,17 @@ ashley = User.create!(
   last_name: "Garcia",
   password: "password"
   )
+
 puts "Creating spaces..."
-Space.create(user: meder, capacity: 5, price: 60, amenities: "some text", name: "Mango", space_type: "garage", location: "barcelona")
-Space.create(user: kristine, capacity: 6, price: 40, amenities: "some text", name: "Banana", space_type: "garage", location: "barcelona")
-Space.create(user: ricardo, capacity: 8, price: 50, amenities: "some text", name: "Chicken", space_type: "garage", location: "barcelona")
-Space.create(user: ashley, capacity: 4, price: 100, amenities: "some text", name: "Orange", space_type: "garage", location: "barcelona")
+concert_hall = Space.create(user: meder, capacity: 300, price: 60, amenities: "some text", name: "concert hall", space_type: "garage", location: "barcelona")
+party_room = Space.create(user: kristine, capacity: 50, price: 40, amenities: "some text", name: "party room", space_type: "garage", location: "barcelona")
+banquet_hall = Space.create(user: ricardo, capacity: 200, price: 50, amenities: "some text", name: "banquet hall", space_type: "garage", location: "barcelona")
+garage = Space.create(user: ashley, capacity: 20, price: 100, amenities: "some text", name: "garage", space_type: "garage", location: "barcelona")
 
 puts "Spaces created, finished..."
+puts "Creating bookings"
+Booking.create(user: kristine, space: garage, total_price: 500.00 , start_date: "21/05/2019/1900", end_date: "21/05/2019/2300")
+
+
+puts "Bookings created, finished..."
+
