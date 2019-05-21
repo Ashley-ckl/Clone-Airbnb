@@ -33,6 +33,6 @@ class SpacesController < ApplicationController
   private
 
   def space_params
-    params.require(:space).permit(:capacity, :price, :amenities, :description, :name, :space_type, :location)
+    params.require(:space).permit(:capacity, :price, :amenities, :description, :name, :space_type, :location, :capacity_id)
   end
 end
