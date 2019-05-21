@@ -1,10 +1,9 @@
 <div class="banner">
-  <div class="funky-form">
-    <form action="/spaces/search" method="GET" class="landing-form">
-      <label>Location</label>:
-      <input name="location" type="text" /><br />
-
-      <label>Capacity</label>:
+  <div class="landing-form">
+    <form action="/spaces/search" method="GET" class="funky-form">
+      <label>Location</label>
+      <input name="location" type="text">
+      <label>Capacity</label>
       <select name="capacity">
         <option value="less than 20">less than 20</option>
         <option value="20 to 50">20 to 50</option>
@@ -13,7 +12,6 @@
         <option value="200 to 500">200 to 500</option>
         <option value="500+">500+</option>
       </select>
-      <br/>
       <button value="Search" class="funky-button">Search</button>
     </form>
   </div>

@@ -1,15 +1,26 @@
 .funky-form {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 4px;
+  background-color: white;
+  label {
+    margin-bottom: 10px;
+  };
+  input {
+    margin-top: 10px;
+  };
+  select {
+    margin-top: 10px;
+  }
+  button {
+    margin-top: 20px;
+  }
+}
+.landing-form {
   position: relative;
   left: 160px;
   top: 150px;
-  background-color: white;
-  padding: 20px;
   width: 20vw;
-  border-radius: 4px;
 }
-.landing-form {
 
-}
-.landing-form button {
-
-}
