@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Booking.destroy_all
 Space.destroy_all
 User.destroy_all
-Booking.destroy_all
 
 
 meder = User.create!(
@@ -40,10 +40,10 @@ ashley = User.create!(
   )
 
 puts "Creating spaces..."
-concert_hall = Space.create(user: meder, capacity: 300, price: 60, amenities: "some text", name: "concert hall", space_type: "garage", location: "barcelona")
-party_room = Space.create(user: kristine, capacity: 50, price: 40, amenities: "some text", name: "party room", space_type: "garage", location: "barcelona")
-banquet_hall = Space.create(user: ricardo, capacity: 200, price: 50, amenities: "some text", name: "banquet hall", space_type: "garage", location: "barcelona")
-garage = Space.create(user: ashley, capacity: 20, price: 100, amenities: "some text", name: "garage", space_type: "garage", location: "barcelona")
+concert_hall = Space.create!(user: meder, capacity: "500+", price: 60, amenities: "some text", name: "concert hall", space_type: "garage", location: "barcelona", description:"nice")
+party_room = Space.create!(user: kristine, capacity: "20 to 50", price: 40, amenities: "some text", name: "party room", space_type: "garage", location: "barcelona",  description:"nice")
+banquet_hall = Space.create!(user: ricardo, capacity: "100 to 200", price: 50, amenities: "some text", name: "banquet hall", space_type: "garage", location: "barcelona",  description:"nice")
+garage = Space.create!(user: ashley, capacity: "200 to 500", price: 200, amenities: "some text", name: "garage", space_type: "garage", location: "barcelona",  description:"nice")
 
 puts "Spaces created, finished..."
 puts "Creating bookings"

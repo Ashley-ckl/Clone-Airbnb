@@ -1,6 +1,6 @@
 class Space < ApplicationRecord
   belongs_to :user
-  validates :capacity, presence: true, numericality: { only_integer: true}
+  validates :capacity, presence: true
   validates :price, presence: true, numericality: { only_integer: false}
   validates :amenities, presence: true
   validates :description, presence: true
