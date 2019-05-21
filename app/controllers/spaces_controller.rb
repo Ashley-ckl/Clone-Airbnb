@@ -14,7 +14,8 @@ class SpacesController < ApplicationController
 
   def create
     @space = Space.new(space_params)
-    if @spaces.save
+    @space.user = current_user
+    if @space.save
       redirect_to space_path(@space)
     else
       render :new
@@ -22,9 +23,12 @@ class SpacesController < ApplicationController
   end
 
   def search
+    @results = Space.where("location ILIKE ? AND capacity = ?", params[:location], params[:capacity])
+    # raise
   end
 
-private
+  private
+
   def space_params
     params.require(:space).permit(:capacity, :price, :amenities, :description, :name, :space_type, :location)
   end
