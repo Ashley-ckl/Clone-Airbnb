@@ -11,13 +11,17 @@
   </head>
   <body>
     <div class="navbar navbar-expand-sm navbar-light navbar-funky-space">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="/">
         <%= image_tag "logo.png" %>
       </a>
       <div class="nav-links">
-      <a href="#">Become a host</a>
-      <a href="#">Sign up</a>
-      <a href="#">Log in</a>
+      <a><%= link_to "List your space", new_space_path %></a>
+      <% if user_signed_in? %>
+        <a><%= link_to "Log out", destroy_user_session_path, method: :delete  %></a>
+      <% else %>
+        <a><%= link_to "Sign up", new_user_registration_path %></a>
+        <a><%= link_to "Log in", user_session_path %></a>
+      <% end %>
       </div>
     </div>
     <%= yield %>
@@ -27,3 +31,5 @@
     <%= javascript_pack_tag 'application' %>
   </body>
 </html>
+
+
