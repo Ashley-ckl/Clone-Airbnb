@@ -27,6 +27,7 @@ class SpacesController < ApplicationController
     if params[:capacity].present?
       @results = @results.where("capacity = ?", params[:capacity])
     end
+    # raise
   end
 
   private
