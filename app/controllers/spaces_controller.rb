@@ -1,8 +1,5 @@
 class SpacesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show]
-  def index
-    @spaces = Space.all
-  end
+  skip_before_action :authenticate_user!, only: [:index, :show, :search]
 
   def show
     @space = Space.find(params[:id])
@@ -18,13 +15,18 @@ class SpacesController < ApplicationController
     if @space.save
       redirect_to space_path(@space)
     else
-      render :new
+       :new
     end
   end
 
   def search
-    @results = Space.where("location ILIKE ? AND capacity = ?", params[:location], params[:capacity])
-    # raise
+    @results = Space.all
+    if params[:location].present?
+      @results = @results.where("location ILIKE ?", params[:location])
+    end
+    if params[:capacity].present?
+      @results = @results.where("capacity = ?", params[:capacity])
+    end
   end
 
   private
