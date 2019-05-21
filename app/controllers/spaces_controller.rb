@@ -18,6 +18,7 @@ class SpacesController < ApplicationController
       redirect_to space_path(@space)
     else
       render :new
+    end
   end
 
   def search
@@ -25,6 +26,6 @@ class SpacesController < ApplicationController
 
 private
   def space_params
-    params.require(:space).permit(:capacity, :price, :amenities, :description, :name, :type, :location)
+    params.require(:space).permit(:capacity, :price, :amenities, :description, :name, :space_type, :location)
   end
 end
