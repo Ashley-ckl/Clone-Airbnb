@@ -1,15 +1,14 @@
 .funky-form {
   position: relative;
-  left: 160px;
-  top: 150px;
   background-color: white;
   padding: 20px;
   width: 20vw;
   border-radius: 4px;
 }
-.landing-form {
-
+.funky-form button {
+  right: 20px;
 }
-.landing-form button {
-
+.landing-form {
+  left: 160px;
+  top: 150px;
 }
