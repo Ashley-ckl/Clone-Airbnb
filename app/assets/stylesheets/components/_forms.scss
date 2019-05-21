@@ -1,28 +1,38 @@
 .funky-form {
   display: flex;
   flex-direction: column;
-  padding: 30px;
+  padding: 0 30px;
   border-radius: 4px;
   background-color: white;
+  h2 {
+   margin-top: 20px;
+   font-weight: bold;
+  }
   label {
-    margin-bottom: 10px;
+    margin-top: 10px;
   };
   input {
-    margin-top: 10px;
+    margin-top: 3px;
+    border-radius: 4px;
   };
   select {
-    margin-top: 10px;
-  }
+    margin-top: 3px;
+    border-radius: 3px;
+  };
   button {
-    margin-top: 20px;
-  }
+    margin: 30px 0;
+  };
+  submit {
+    margin: 30px 0;
+  };
 }
 .landing-form {
   position: relative;
   left: 160px;
   top: 150px;
-  background-color: white;
-  padding: 20px;
   width: 20vw;
+  button {
+    float: right;
+  };
 }
 
