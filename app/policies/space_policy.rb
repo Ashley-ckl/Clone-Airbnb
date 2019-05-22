@@ -4,4 +4,20 @@ class SpacePolicy < ApplicationPolicy
       scope.all
     end
   end
+  def new?
+    true
+  end
+
+  def create?
+    true
+  end
+
+  def show?
+    true
+  end
+
+  def search?
+    true
+  end
+
 end
