@@ -5,13 +5,13 @@
        <%= image_tag "banner2.jpg" %>
        <div class="funky-card-search-info">
          <div>
-           <h3><%= space.location %></h3>
-           <h2><%= space.name %></h2>
+           <h3><%= @space.location %></h3>
+           <h2><%= @space.name %></h2>
            <p>Rating here</p>
-           <p><%= space.capacity %></p>
-           <p>$<%= space.price %>/hour</p>
-           <p><%= space.amenities %></p>
-           <p><%= space.description%></p>
+           <p><%= @space.capacity %></p>
+           <p>$<%= @space.price_per_hour %>/hour</p>
+           <p><%= @space.amenities %></p>
+           <p><%= @space.description%></p>
          </div>
    </div>
 <br>
