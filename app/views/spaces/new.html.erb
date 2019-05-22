@@ -1,17 +1,19 @@
 <div class="funky-container">
-  <h1>Spaces#new</h1>
-  <p>Find me in app/views/spaces/new.html.erb</p>
-
-  <%= simple_form_for(@space) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :price_per_hour %>
-  <%= f.input :capacity, collection: ["less than 20", "20 to 50", "100 to 200", "200 to 500", "500+"] %>
-  <%= f.input :amenities %>
-  <%#= f.input :space_type %>
-  <%= f.input :location %>
-  <%= f.button :submit %>
-  <% end %>
-  <br>
+  <div class="funky-form">
+    <div class="sign-load-form">
+      <h2>Spaces#new</h2>
+      <%= simple_form_for(@space) do |f| %>
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.input :price_per_hour %>
+      <%= f.input :capacity, collection: ["", "less than 20", "20 to 50", "100 to 200", "200 to 500", "500+"] %>
+      <%= f.input :amenities %>
+      <%#= f.input :space_type %>
+      <%= f.input :location %>
+      <%= f.button :submit %>
+      <% end %>
+      <br>
+    </div>
+  </div>
 </div>
 
