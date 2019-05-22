@@ -3,7 +3,7 @@
   <div class="funky-cards-grid">
       <% @results.each do |space| %>
        <div class="funky-card-search">
-         <%= image_tag "banner2.jpg" %>
+       <%= cl_image_tag space.photo %>
          <div class="funky-card-search-info">
            <div>
              <h3><%= space.location %></h3>
