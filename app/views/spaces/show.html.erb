@@ -3,7 +3,7 @@
 <p>Find me in app/views/spaces/show.html.erb</p>
  <div class="funky-cards-grid">
      <div class="funky-card-search">
-       <%= image_tag "banner2.jpg" %>
+      <%= cl_image_tag @space.photo, height: 300, width: 400, crop: :fill %>
        <div class="funky-card-search-info">
          <div>
            <h3><%= @space.location %></h3>
@@ -13,6 +13,7 @@
            <p>$<%= @space.price_per_hour %>/hour</p>
            <p><%= @space.amenities %></p>
            <p><%= @space.description%></p>
+
          </div>
    </div>
 <br>

@@ -6,6 +6,5 @@ class Space < ApplicationRecord
   validates :amenities, presence: true
   validates :description, presence: true
   validates :name, presence: true
-  validates :space_type, presence: true
   validates :location, presence: true
 end

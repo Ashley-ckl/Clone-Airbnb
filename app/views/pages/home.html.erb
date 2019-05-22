@@ -27,7 +27,8 @@
   <div class="funky-cards-grid">
     <% @home_spaces.each do |space| %>
      <div class="funky-card-search">
-       <%= image_tag "banner2.jpg" %>
+
+                  <%= cl_image_tag space.photo, height: 300, width: 400, crop: :fill %>
        <div class="funky-card-search-info">
          <div>
            <h3><%= space.location %></h3>
