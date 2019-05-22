@@ -1,18 +1,18 @@
 <div class="funky-container">
   <div class="funky-form">
     <div class="sign-load-form">
-      <h2>Spaces#new</h2>
+      <h2>List your space</h2>
       <%= simple_form_for(@space) do |f| %>
       <%= f.input :name %>
       <%= f.input :description %>
       <%= f.input :price_per_hour %>
-      <%= f.input :capacity, collection: ["", "less than 20", "20 to 50", "100 to 200", "200 to 500", "500+"] %>
+      <%= f.input :capacity, collection: ["less than 20", "20 to 50", "100 to 200", "200 to 500", "500+"] %>
       <%= f.input :amenities %>
       <%#= f.input :space_type %>
       <%= f.input :location %>
       <%= f.input :photo %>
       <%= f.input :photo_cache, as: :hidden %>
-      <%= f.button :submit %>
+      <%= f.button :submit, "Submit", class: "funky-button-large" %>
       <% end %>
       <br>
     </div>
