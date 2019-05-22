@@ -23,7 +23,13 @@ class SpacesController < ApplicationController
   end
 
   def search
-    @results = Space.all
+    @results = Space.where.not(latitude: nil, longitude: nil)
+    @markers = @results.map do |space|
+      {
+        lat: space.latitude,
+        lng: space.longitude
+      }
+    end
     authorize(@results)
     if params[:location].present?
       @results = @results.where("location ILIKE ?", params[:location])
