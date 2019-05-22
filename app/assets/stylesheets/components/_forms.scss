@@ -5,9 +5,22 @@
   border-radius: 4px;
   background-color: white;
   h2 {
-   margin-top: 20px;
-   font-weight: bold;
-  }
+    margin-top: 20px;
+    font-weight: bold;
+  };
+  h3 {
+    margin-top: 20px;
+    font-weight: bold;
+  };
+  h4 {
+    margin-top: 20px;
+  };
+  h5 {
+    margin-top: 20px;
+  };
+  h6 {
+    margin-top: 20px;
+  };
   label {
     margin-top: 10px;
   };
@@ -49,5 +62,9 @@
   button {
     float: right;
   };
+}
+.show-form {
+  border: 1px solid $funky-black-light;
+  width: 250px;
 }
 
