@@ -1,22 +1,28 @@
-
-<h1>Spaces#show</h1>
-<p>Find me in app/views/spaces/show.html.erb</p>
- <div class="funky-cards-grid">
-     <div class="funky-card-search">
-      <%= cl_image_tag @space.photo, height: 300, width: 400, crop: :fill %>
-       <div class="funky-card-search-info">
-         <div>
-           <h3><%= @space.location %></h3>
-           <h2><%= @space.name %></h2>
-           <p>Rating here</p>
-           <p><%= @space.capacity %></p>
-           <p>$<%= @space.price_per_hour %>/hour</p>
-           <p><%= @space.amenities %></p>
-           <p><%= @space.description%></p>
-
-         </div>
-   </div>
-<br>
-<br>
- <%= link_to 'Back', :back %>
-
+<div class="banner-show"></div>
+<div class="funky-container">
+  <div class="funky-show-container">
+    <div class="funky-card">
+      <div class="funky-card-avatar">
+        <h2><%= @space.name %></h2>
+        <a><%= image_tag "avatar.jpg", class: "avatar" %></a>
+      </div>
+      <P><%= @space.location %></P>
+      <hr>
+      <h6>Capacity</h6>
+      <p><%= @space.capacity %></p>
+      <h6>Amenities</h6>
+      <p><%= @space.amenities %></p>
+      <hr>
+      <p><%= @space.description%></p>
+    </div>
+    <div class="show-form">
+      <div class="funky-form">
+        <h5>Confirm the date</h5>
+        <p>Rating here</p>
+        <p>$<%= @space.price_per_hour %></p>
+      </div>
+    </div>
+    <br>
+    <br>
+  </div>
+</div>
