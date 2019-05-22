@@ -1,21 +1,22 @@
-<h2>Where to book</h2>
-<div class="funky-cards-grid">
-    <% @results.each do |space| %>
-     <div class="funky-card-search">
-       <%= image_tag "banner2.jpg" %>
-       <div class="funky-card-search-info">
-         <div>
-           <h3><%= space.location %></h3>
-           <h2><%= space.name %></h2>
-           <p><%= space.capacity %></p>
-           <p>$<%= space.price %>/hour</p>
-           <button><%= link_to "View", space_path(space.id) %></button>
+<div class="funky-container">
+  <h2>Where to book</h2>
+  <div class="funky-cards-grid">
+      <% @results.each do |space| %>
+       <div class="funky-card-search">
+         <%= image_tag "banner2.jpg" %>
+         <div class="funky-card-search-info">
+           <div>
+             <h3><%= space.location %></h3>
+             <h2><%= space.name %></h2>
+             <p><%= space.capacity %></p>
+             <p>$<%= space.price %>/hour</p>
+             <button><%= link_to "View", space_path(space.id) %></button>
+           </div>
          </div>
-       </div>
-   </div>
-  <% end %>
+     </div>
+    <% end %>
+  </div>
+
+  <br>
+    <%= link_to 'Back', root_path %>
 </div>
-
-<br>
-  <%= link_to 'Back', root_path %>
-
