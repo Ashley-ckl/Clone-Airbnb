@@ -59,6 +59,7 @@ boat = Space.new(user: ashley, capacity: "200 to 500", price_per_hour: 200, amen
 boat.remote_photo_url = "https://www.thewhiteisle.co.uk/wp-content/uploads/2017/02/pukka-800x533.jpeg"
 boat.save
 
+
 puts "Spaces created, finished..."
 puts "Creating bookings"
 # Booking.create(user: kristine, space: garage, total_price: 500.00 , start_date: "21/05/2019/1900", end_date: "21/05/2019/2300")
