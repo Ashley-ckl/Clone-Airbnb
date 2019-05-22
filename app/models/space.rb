@@ -1,4 +1,5 @@
 class Space < ApplicationRecord
+  mount_uploader :photo, PhotoUploader
   belongs_to :user
   validates :capacity, presence: true
   validates :price_per_hour, presence: true, numericality: { only_integer: false}

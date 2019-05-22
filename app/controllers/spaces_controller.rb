@@ -18,7 +18,7 @@ class SpacesController < ApplicationController
     if @space.save
       redirect_to space_path(@space)
     else
-       render :new
+      render :new
     end
   end
 
@@ -37,6 +37,6 @@ class SpacesController < ApplicationController
   private
 
   def space_params
-    params.require(:space).permit(:capacity, :price_per_hour, :amenities, :description, :name, :location)
+    params.require(:space).permit(:capacity, :price_per_hour, :amenities, :description, :name, :location, :photo)
   end
 end
