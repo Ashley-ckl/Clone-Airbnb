@@ -1,10 +1,16 @@
 .funky-card {
+  width: 600px;
+  margin-right: 80px;
+  .funky-card-avatar{
+    display: flex;
+    justify-content: space-between;
+  }
 }
 .funky-card-search {
   padding-top: 10px;
   overflow: hidden;
   background: white;
-  width: 370px;
+  width: 365px;
   img {
     border-radius: 4px;
     height: 250px;
