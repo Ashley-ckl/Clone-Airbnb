@@ -7,6 +7,15 @@
   padding: 10px 25px;
   width: 150px;
 }
+.funky-button-small {
+  font-weight: bold;
+  background-color: $funky-yellow;
+  color: $funky-purple;
+  border: none;
+  border-radius: 4px;
+  padding: 7px 10px;
+  width: 80px;
+}
 .funky-button-large {
   font-weight: bold;
   background-color: $funky-yellow;
