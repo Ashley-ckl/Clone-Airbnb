@@ -16,6 +16,10 @@ class BookingController < ApplicationController
     end
   end
 
+  def my_bookings
+    @bookings = Booking.all
+  end
+
   private
 
   def strong_booking_params
