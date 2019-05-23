@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_23_085537) do
+ActiveRecord::Schema.define(version: 2019_05_23_110248) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 2019_05_23_085537) do
     t.datetime "updated_at", null: false
     t.string "status", default: "pending"
     t.integer "hours"
+    t.bigint "host_id"
+    t.index ["host_id"], name: "index_bookings_on_host_id"
     t.index ["space_id"], name: "index_bookings_on_space_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end

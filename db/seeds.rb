@@ -64,7 +64,9 @@ boat.save
 
 puts "Spaces created, finished..."
 puts "Creating bookings"
-# Booking.create(user: kristine, total_price: 500.00 , start_date: "21/05/2019/1900", end_date: "21/05/2019/2300")
+Booking.create(user: meder, host_id: ashley.id,  space: party_room, total_price: 500.00 , start_date: "2019-05-21 19:00:00", hours: 7)
+Booking.create(user: meder, host_id: kristine.id, space: party_room, total_price: 500.00 , start_date: "2019-05-21 20:00:00", hours: 4)
+Booking.create(user: ricardo, host_id: meder.id, space: party_room, total_price: 500.00 , start_date: "2019-05-21 17:00:00", hours: 6)
 
 
 puts "Bookings created, finished..."

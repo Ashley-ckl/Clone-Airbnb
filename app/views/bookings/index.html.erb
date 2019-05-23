@@ -1,0 +1,19 @@
+
+<div class="funky-container">
+  <h1>All my bookings</h1>
+  <h2>Booking for my events</h2>
+  <% @bookings_for_my_events.each do |booking| %>
+  <p><%= booking.space.name%></p>
+  <p><%= cl_image_tag booking.space.photo %></p>
+  <p>Start date & time: <%= booking.start_date%></p>
+  <p><%= booking.hours%> hours</p>
+  <% end %>
+
+  <h2>Booking for my spaces</h2>
+  <% @bookings_for_my_spaces.each do |booking| %>
+  <p><%= booking.space.name%></p>
+  <p><%= cl_image_tag booking.space.photo %></p>
+  <p>Start date & time: <%= booking.start_date%></p>
+  <p><%= booking.hours%> hours</p>
+  <% end %>
+</div>
