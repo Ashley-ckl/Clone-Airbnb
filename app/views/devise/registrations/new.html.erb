@@ -23,7 +23,8 @@
                       autofocus: true,
                       input_html: { autocomplete: "city" }%>
           <%= f.input :password,
-
+                      required: false,
+                      input_html: { autocomplete: "new-password" } %>
           <%= f.input :photo %>
           <%= f.input :photo_cache, as: :hidden %>
         </div>
