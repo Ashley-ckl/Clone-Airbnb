@@ -1,5 +1,16 @@
 <div class="funky-container">
-  <h1>book a room</h1>
+     <div class="funky-form">
+    <div class="sign-load-form">
+      <%= simple_form_for [@space, @booking] do |f| %>
+      <%= f.input :start_date%>
+      <%= f.input :start_time%>
+      <%= f.input :hours%>
+      <%= f.button :submit, "Book now!", class: "funky-button-large" %>
+      <% end %>
+      <br>
+    </div>
+  </div>
+
 </div>
 
 
