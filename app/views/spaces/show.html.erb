@@ -22,14 +22,20 @@
           <p> per hour</p>
         </div>
         <p>Rating here</p>
-        <p>Confirm the date</p>
+        <hr>
+        <h5>Confirm the date</h5>
         <%= simple_form_for [@space, @booking] do |f| %>
           <%= f.input :start_date%>
           <%= f.input :start_time%>
           <%= f.input :hours%>
-          <%= f.button :submit, "Book now!", class: "funky-button-large" %>
+          <hr>
+          <div class="show-form-price">
+            <h5>Total price</h5>
+            <p><% @space.price_per_hour %></p>
+          </div>
+          <hr>
+          <%= f.button :submit, "Book now!", class: "funky-button" %>
         <% end %>
-      <br>
-    </div>
+      </div>
   </div>
 
