@@ -3,12 +3,15 @@ class SpacesController < ApplicationController
 
   def show
     @space = Space.find(params[:id])
+    @booking = Booking.new
     authorize(@space)
+
   end
 
   def new
     @space = Space.new
     authorize(@space)
+
   end
 
   def create
