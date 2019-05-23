@@ -16,18 +16,19 @@
       <p><%= @space.description%></p>
     </div>
     <div class="show-form">
-      <div class="funky-form">
-        <h5>Confirm the date</h5>
+      <div class="funky-show-form">
+        <div class="show-form-top">
+          <h2>$<%= @space.price_per_hour %> </h2>
+          <p> per hour</p>
+        </div>
         <p>Rating here</p>
-        <p>$<%= @space.price_per_hour %>/hour</p>
-         <div class="funky-form">
-    <div class="sign-load-form">
-      <%= simple_form_for [@space, @booking] do |f| %>
-      <%= f.input :start_date%>
-      <%= f.input :start_time%>
-      <%= f.input :hours%>
-      <%= f.button :submit, "Book now!", class: "funky-button-large" %>
-      <% end %>
+        <p>Confirm the date</p>
+        <%= simple_form_for [@space, @booking] do |f| %>
+          <%= f.input :start_date%>
+          <%= f.input :start_time%>
+          <%= f.input :hours%>
+          <%= f.button :submit, "Book now!", class: "funky-button-large" %>
+        <% end %>
       <br>
     </div>
   </div>
