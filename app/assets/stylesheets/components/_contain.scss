@@ -36,3 +36,13 @@
   padding: 0 250px;
   width: 100%;
 }
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  div {
+    margin-right: 400px;
+    border: 1px solid $funky-black-light;
+  }
+}

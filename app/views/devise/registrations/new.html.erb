@@ -22,13 +22,13 @@
                       required: false,
                       autofocus: true,
                       input_html: { autocomplete: "city" }%>
+          <%= f.input :password %>
           <%= f.input :password,
                       required: false,
                       input_html: { autocomplete: "new-password" } %>
-          <%= f.input :photo %>
-          <%= f.input :photo_cache, as: :hidden %>
+          <%= f.input :avatar %>
+          <%= f.input :avatar_cache, as: :hidden %>
         </div>
-
         <div class="form-actions">
           <%= f.button :submit, "Sign up", class: "funky-button-large" %>
         </div>
