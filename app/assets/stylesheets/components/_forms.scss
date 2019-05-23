@@ -4,46 +4,22 @@
   padding: 0 30px;
   border-radius: 4px;
   background-color: white;
-  h2 {
-    margin-top: 20px;
-    font-weight: bold;
-  };
-  h3 {
-    margin-top: 20px;
-    font-weight: bold;
-  };
-  h4 {
-    margin-top: 20px;
-  };
-  h5 {
-    margin-top: 20px;
-  };
-  h6 {
-    margin-top: 20px;
-  };
-  label {
-    margin-top: 10px;
-  };
-  input {
-    margin-top: 3px;
-    border-radius: 4px;
-  };
-  select {
-    margin-top: 3px;
-    border-radius: 3px;
-  };
-  button {
-    margin: 30px 0;
-  };
-  submit {
-    margin: 30px 0;
-  };
 }
 .landing-form {
   position: relative;
   top: 25px;
   width: 400px;
+  h2 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  };
+  label {
+    margin-top: 10px;
+  };
   button {
+    margin-top: 25px;
+    margin-bottom: 20px;
     float: right;
   };
   input {
@@ -53,11 +29,49 @@
     background-color: transparent;
   };
 }
-.sign-load-form {
+.sign-form {
+  padding: 30px;
+  border-radius: 4px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  position: relative;
   margin: 0 auto;
-  width: 1000px;
-  button {
-    float: right;
+  width: 550px;
+  .funky-button-large {
+    margin-top: 20px;
+    float: center;
+  };
+}
+.load-form {
+  padding: 30px;
+  border-radius: 4px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  position: relative;
+  margin: 0 auto;
+  width: 550px;
+  .funky-button-large {
+    margin-top: 20px;
+    float: center;
+  };
+}
+.list-space-form {
+  padding: 30px;
+  border-radius: 4px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  position: relative;
+  margin: 0 auto;
+  width: 550px;
+  input[type="file"] {
+    font-weight: bold;
+    background-color: $funky-yellow;
+    color: $funky-purple;
+    border: none;
+    border-radius: 4px;
+    padding: 7px 10px;
+    width: 120px;
+  };
+  .funky-button-large {
+    margin-top: 20px;
+    float: center;
   };
 }
 .show-form {
