@@ -17,9 +17,10 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.space = @space
     @booking.host =  @space.user
+    @booking.total_price = @space.price_per_hour * @booking.hours
     authorize(@booking)
     if @booking.save
-      redirect_to space_bookings_path
+      redirect_to new_booking_payment_path(@booking)
     else
       render :new
     end
