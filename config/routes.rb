@@ -5,14 +5,13 @@ Rails.application.routes.draw do
   resources :spaces, only: [:show, :new, :create] do
     collection do
       get 'search'
+      get 'my_bookings'
     end
     resources :reviews, only: [:new, :create]
     resources :bookings, only: [:new, :create] do
       resources :payments, only: [:new, :create]
     end
   end
-  resources :bookings, only: [:index] do
-
-  end
+  resources :bookings, only: [:index]
 
 end

@@ -23,9 +23,13 @@
         </div>
         <p>Rating here</p>
         <p>Confirm the date</p>
-      </div>
+        <%= simple_form_for [@space, @booking] do |f| %>
+          <%= f.input :start_date%>
+          <%= f.input :start_time%>
+          <%= f.input :hours%>
+          <%= f.button :submit, "Book now!", class: "funky-button-large" %>
+        <% end %>
+      <br>
     </div>
-    <br>
-    <br>
   </div>
-</div>
+
