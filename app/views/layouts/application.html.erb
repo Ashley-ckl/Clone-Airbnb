@@ -18,7 +18,7 @@
       <a><%= link_to "List your space", new_space_path %></a>
       <% if user_signed_in? %>
         <div class="nav-item dropdown">
-          <% if current_user.avatar.nil? %>
+          <% if current_user.avatar.url.nil? %>
           <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<%= image_path 'avatar.jpg' %>" />
           <% else %>
           <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<%= cl_image_path current_user.avatar %>" />
