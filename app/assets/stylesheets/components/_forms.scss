@@ -74,9 +74,23 @@
     float: center;
   };
 }
+.funky-show-form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: white;
+}
 .show-form {
   border: 1px solid $funky-black-light;
-  width: 250px;
+  width: 300px;
+}
+.show-form-top {
+  display: flex;
+  align-items: center;
+  p {
+    position: abolute;
+  }
 }
 .form-when {
   display: flex;
