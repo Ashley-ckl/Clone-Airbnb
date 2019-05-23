@@ -1,20 +1,15 @@
-class BookingPolicy < ApplicationPolicy
+class PaymentPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
     end
   end
 
-  def index?
-    true
-  end
-
-  def new?
+   def new?
     true
   end
 
   def create?
     true
   end
-
 end
