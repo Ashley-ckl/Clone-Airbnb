@@ -38,11 +38,12 @@
 }
 .profile-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 300px;
-  div {
-    margin-right: 400px;
+  height: 500px;
+  .profile-left {
+    vertical-align: middle;
+    margin: 0 150px;
+    height: 950px;
+    padding: 20px 50px;
     border: 1px solid $funky-black-light;
   }
 }
