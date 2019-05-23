@@ -1,6 +1,6 @@
 <div class="funky-container">
-   <div class="funky-form">
-     <div class="sign-load-form">
+   <div class="load-form">
+     <div class="funky-form">
         <h2>Log in</h2>
         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <div class="form-inputs">
@@ -18,7 +18,7 @@
             <%= f.button :submit, "Log in", class: "funky-button-large" %>
           </div>
         <% end %>
+        <a><%= render "devise/shared/links" %></a>
       </div>
-      <a><%= render "devise/shared/links" %></a>
     </div>
 </div>
