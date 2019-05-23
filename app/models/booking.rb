@@ -1,7 +1,8 @@
 class Booking < ApplicationRecord
   belongs_to :user
   belongs_to :space
+  belongs_to :host, class_name: "User"
   validates :start_date, presence: true
-  validates :end_date, presence: true
-  validates :status, presence: true, inclusion: {in: ['pending', 'confirmed', 'declined']}
+  validates :hours, presence: true
+  validates :status, presence: true, inclusion: { in: ['pending', 'confirmed', 'declined']}
 end

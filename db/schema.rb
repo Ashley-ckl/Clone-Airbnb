@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2019_05_23_124818) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,11 +21,13 @@ ActiveRecord::Schema.define(version: 2019_05_23_124818) do
     t.bigint "user_id"
     t.bigint "space_id"
     t.datetime "start_date"
-    t.datetime "end_date"
     t.integer "total_price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "status", default: "pending"
+    t.integer "hours"
+    t.bigint "host_id"
+    t.index ["host_id"], name: "index_bookings_on_host_id"
     t.index ["space_id"], name: "index_bookings_on_space_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
@@ -57,9 +61,9 @@ ActiveRecord::Schema.define(version: 2019_05_23_124818) do
     t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "photo"
     t.float "latitude"
     t.float "longitude"
+    t.string "photo"
     t.index ["user_id"], name: "index_spaces_on_user_id"
   end
 
@@ -75,6 +79,7 @@ ActiveRecord::Schema.define(version: 2019_05_23_124818) do
     t.string "last_name"
     t.string "photo"
     t.boolean "host", default: false
+    t.string "avatar"
     t.string "city"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

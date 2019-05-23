@@ -1,7 +1,36 @@
 .funky-container {
-  padding: 50px 150px;
   width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
 }
+
+@media (min-width: 576px) {
+  .funky-container {
+    max-width: 620px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 850px;
+  }
+}
+
+@media (min-width: 992px) {
+  .funky-container {
+    max-width: 1000px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .funky-container {
+    max-width: 1500px;
+  }
+}
+
 .funky-show-container {
   display: flex;
   justify-content: center;

@@ -13,7 +13,10 @@
   display: flex;
   flex-direction: row;
   a {
-    margin-right: 15px;
+    margin-right: 25px;
     align-self: center;
+  }
+  .drop-link {
+    margin-right: 0;
   }
 }

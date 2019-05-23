@@ -8,9 +8,10 @@ Rails.application.routes.draw do
       get 'my_bookings'
     end
     resources :reviews, only: [:new, :create]
-    resources :bookings, only: [:index, :new, :create] do
+    resources :bookings, only: [:new, :create] do
       resources :payments, only: [:new, :create]
     end
   end
   resources :bookings, only: [:index]
+
 end

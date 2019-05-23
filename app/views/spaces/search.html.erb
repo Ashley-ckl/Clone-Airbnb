@@ -3,16 +3,17 @@
   <div class="funky-cards-grid">
       <% @results.each do |space| %>
        <div class="funky-card-search">
-       <%= cl_image_tag space.photo %>
-         <div class="funky-card-search-info">
-           <div>
-             <h3><%= space.location %></h3>
-             <h2><%= space.name %></h2>
-             <p><%= space.capacity %></p>
-             <p>$<%= space.price_per_hour %>/hour</p>
-             <button class="funky-button-small"><%= link_to "View", space_path(space.id) %></button>
-           </div>
-         </div>
+        <%= link_to space_path(space) do %>
+          <%= cl_image_tag space.photo %>
+           <div class="funky-card-search-info">
+              <div>
+                <h3><%= space.location %></h3>
+                <h2><%= space.name %></h2>
+                <p><%= space.capacity %></p>
+                <p>$<%= space.price_per_hour %>/hour</p>
+              </div>
+            </div>
+          <% end %>
      </div>
     <% end %>
   </div>
