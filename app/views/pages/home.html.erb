@@ -5,10 +5,21 @@
         <h2>Book awesome event spaces.</h2>
         <label>Where</label>
         <input name="location" type="text" class="form-control">
-        <label>Start Date & Time</label>
-        <input type="datetime-local" class="form-control" name="start_date" >
-        <label>Duration (number of hours)</label>
-        <input type="integer" class="form-control" name="hours" >
+
+        <label>When</label>
+        <div class="form-when">
+          <input name="date" type="date" class="form-control">
+          <input name="time" type="time" class="form-control">
+        </div>
+        <label>Duration</label>
+        <select name="duration" class="form-control">
+          <option value="2 hours">2 hours</option>
+          <option value="4 hours">4 hours</option>
+          <option value="8 hours">8 hours</option>
+          <option value="12 hours">12 hours</option>
+          <option value="24 hours">24 hours</option>
+          <option value="Whole weekend">Whole weekend</option>
+        </select>
         <label>Capacity</label>
         <select name="capacity" class="form-control">
           <option value=""></option>
