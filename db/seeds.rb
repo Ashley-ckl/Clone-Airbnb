@@ -15,29 +15,35 @@ meder = User.create!(
   email: "meder@meder.com",
   first_name: "Meder",
   last_name: "Ashiraliev",
-  password: "password"
+  password: "password",
+  avatar: open("https://res.cloudinary.com/mike-asher/image/upload/v1558622915/ukezkpbjfxh6ensucpk0.jpg")
   )
+
 
 kristine = User.create!(
   email: "kristine@kristine.com",
   first_name: "Kristine",
   last_name: "Mcbride",
-  password: "password"
+  password: "password",
+  avatar: open("https://res.cloudinary.com/mike-asher/image/upload/v1558625747/kristine_hu9g6f.png")
   )
 
 ricardo = User.create!(
   email: "ricardo@ricardo.com",
   first_name: "Ricardo",
   last_name: "Espinoza",
-  password: "password"
+  password: "password",
+  avatar: open("https://res.cloudinary.com/mike-asher/image/upload/v1558625527/ricardo_vbuhcm.jpg")
   )
 
 ashley = User.create!(
   email: "ashley@ashley.com",
   first_name: "Ashley",
   last_name: "Garcia",
-  password: "password"
+  password: "password",
+  avatar: open("https://res.cloudinary.com/mike-asher/image/upload/v1558625095/ashley_bm1krp.jpg")
   )
+
 
 puts "Creating spaces..."
 concert_hall = Space.new(user: meder, capacity: "500+", price_per_hour: 100, amenities: "Buffet, Waiting Staff", name: "Concert Hall", location: "Barcelona", description:"The building is rectangular shaped. The house is half surrounded by a covered patio.
