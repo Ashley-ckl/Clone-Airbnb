@@ -11,20 +11,13 @@
           <input name="date" type="date" class="form-control">
           <input name="time" type="time" class="form-control">
         </div>
-        <label>Duration</label>
-        <select name="duration" class="form-control">
-          <option value=""></option>
-          <option value="2 hours">2 hours</option>
-          <option value="4 hours">4 hours</option>
-          <option value="8 hours">8 hours</option>
-          <option value="12 hours">12 hours</option>
-          <option value="24 hours">24 hours</option>
-          <option value="Whole weekend">Whole weekend</option>
-        </select>
+
+        <label>Hours</label>
+          <input type="number" id="number" min="0"  class="form-control"/>
         <label>Capacity</label>
         <select name="capacity" class="form-control">
           <option value=""></option>
-          <option value="Less than 20">less than 20</option>
+          <option value="Less than 20">Less than 20</option>
           <option value="20 to 50">20 to 50</option>
           <option value="50 to 100">50 to 100</option>
           <option value="100 to 200">100 to 200</option>

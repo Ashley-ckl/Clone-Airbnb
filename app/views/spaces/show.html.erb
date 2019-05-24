@@ -29,7 +29,7 @@
         <%= simple_form_for [@space, @booking] do |f| %>
           <%= f.input :start_date%>
           <%= f.input :start_time%>
-          <%= f.input :hours%>
+          <%= f.input :hours, input_html: { min: '0', step: 'any' }%>
           <hr>
           <div class="show-form-price">
             <h5>Total price</h5>
