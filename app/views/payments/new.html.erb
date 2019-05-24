@@ -34,13 +34,27 @@
       <input maxlength="3" type="text" class="form-control">
       <label>Coupon code</label>
       <input type="text" class="form-control">
-      <button class="funky-button-large"> "Pay now"</button>
+      <button class="funky-button-large" id="button"> "Pay now"</button>
     </form>
   </div>
   <br>
   <br>
   <script language="javascript">
-    swal("Good job!", "You clicked the button!", "success");
+    const button = document.getElementById("button");
+    button.addEventListener("click", (event) => {
+      swal({
+      title: "Your booking was sent!",
+      text: "Check the status on 'My Bookings'!",
+      type: "success",
+      button: "My Bookings",
+      confirmButtonColor: "#f7d172",
+      confirmButtonText: "My Bookings",
+    },
+            function(){
+              window.location.href = "/bookings";
+            });
+    });
+
   </script>
 </div>
 
