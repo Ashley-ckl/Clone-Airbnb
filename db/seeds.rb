@@ -5,7 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require 'open-uri'
 
 Booking.destroy_all
 Space.destroy_all
@@ -16,8 +15,7 @@ meder = User.create!(
   email: "meder@meder.com",
   first_name: "Meder",
   last_name: "Ashiraliev",
-  password: "password",
-  avatar: open("https://res.cloudinary.com/mike-asher/image/upload/v1558622915/ukezkpbjfxh6ensucpk0.jpg")
+  password: "password"
   )
 
 
@@ -25,24 +23,21 @@ kristine = User.create!(
   email: "kristine@kristine.com",
   first_name: "Kristine",
   last_name: "Mcbride",
-  password: "password",
-  avatar: open("https://res.cloudinary.com/mike-asher/image/upload/v1558625747/kristine_hu9g6f.png")
+  password: "password"
   )
 
 ricardo = User.create!(
   email: "ricardo@ricardo.com",
   first_name: "Ricardo",
   last_name: "Espinoza",
-  password: "password",
-  avatar: open("https://res.cloudinary.com/mike-asher/image/upload/v1558625527/ricardo_vbuhcm.jpg")
+  password: "password"
   )
 
 ashley = User.create!(
   email: "ashley@ashley.com",
   first_name: "Ashley",
   last_name: "Garcia",
-  password: "password",
-  avatar: open("https://res.cloudinary.com/mike-asher/image/upload/v1558625095/ashley_bm1krp.jpg")
+  password: "password"
   )
 
 
