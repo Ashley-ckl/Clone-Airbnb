@@ -1,11 +1,4 @@
-<!-- <div class="funky-container" id="alert">
- <div class="flash flash-warning alert alert-dismissible fade show" role="alert">
-  <span>Your booking was sent and waiting on confirmation! Check the status the <strong><a><%#= link_to "My Bookings", bookings_path %></a></strong> page</span>
-  <a data-dismiss="alert" aria-label="Close">
-    <i class="fas fa-times"></i>
-  </a>
-  </div>
-</div> -->
+
 
 <div class="funky-container">
   <div class="pay-form">
@@ -34,28 +27,13 @@
       <input maxlength="3" type="text" class="form-control">
       <label>Coupon code</label>
       <input type="text" class="form-control">
-      <button class="funky-button-large" id="button"> "Pay now"</button>
+      <button class="funky-button-large" id="sweetalert"> "Pay now"</button>
     </form>
   </div>
   <br>
   <br>
-  <script language="javascript">
-    const button = document.getElementById("button");
-    button.addEventListener("click", (event) => {
-      swal({
-      title: "Your booking was sent!",
-      text: "Check the status on 'My Bookings'!",
-      type: "success",
-      button: "My Bookings",
-      confirmButtonColor: "#f7d172",
-      confirmButtonText: "My Bookings",
-    },
-            function(){
-              window.location.href = "/bookings";
-            });
-    });
+<%= link_to "", bookings_path, id: "booking-link", class: "hidden" %>
 
-  </script>
 </div>
 
 
