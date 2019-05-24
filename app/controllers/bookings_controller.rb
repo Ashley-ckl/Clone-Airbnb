@@ -20,6 +20,7 @@ class BookingsController < ApplicationController
     authorize(@booking)
     if @booking.save
       @booking.total_price = @space.price_per_hour * @booking.hours
+      @booking.save
       redirect_to new_booking_payment_path(@booking)
     else
       render "spaces/show"

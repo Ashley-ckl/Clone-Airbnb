@@ -28,8 +28,8 @@
       <div class="funky-card-search">
         <h3><%= booking.space.name%>
         <% if booking.status == 'pending' %>
-          <button><%= link_to "Accept", accept_booking_path(booking), method: :patch %></button>
-           <button><%= link_to "Reject", reject_booking_path(booking), method: :patch %></button>
+          <button class="funky-button-small"><%= link_to "Accept", accept_booking_path(booking), method: :patch %></button>
+           <button class="funky-button-small"><%= link_to "Reject", reject_booking_path(booking), method: :patch %></button>
         <% else %>
           <strong><h4><%= booking.status%></h4></strong>
         <% end %></h3>
@@ -42,8 +42,8 @@
             <h6><%= booking.start_time%></h6>
           </div>
         </div>
-      <% end %>
       </div>
+      <% end %>
   </div>
 </div>
 
