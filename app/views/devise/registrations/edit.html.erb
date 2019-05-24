@@ -4,12 +4,12 @@
       <% if current_user.avatar.url.nil? %>
         <%= image_tag 'avatar.jpg', alt: "avatar", class: "avatar-large" %>
       <% else %>
-        <%= image_path current_user.avatar, alt: "avatar", class: "avatar-large" %>
+        <%= cl_image_tag current_user.avatar, alt: "avatar", class: "avatar-large" %>
       <% end %>
       <br>
       <div class="profile-form">
         <div class="funky-form">
-          <h2>Edit your profile</h2>
+          <h4>Edit your profile</h4>
           <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
             <%= f.error_notification %>
 
@@ -50,13 +50,25 @@
       </div>
     </div>
     <div class= "profile-right">
-      <h1>Hello, I am <%= @user.first_name %></h1>
+      <h1>Hello, I'm <%= @user.first_name %></h1>
+      <%= link_to 'See my bookings' %>
+      <br>
+      <%= link_to 'See my spaces' %>
+      <hr>
+      <div class="comments-form">
+        <h3>Comments</h3>
+        <h6>User's name</h6>
+        <p>Text goes here.</p>
+        <h6>User's name</h6>
+        <p>Text goes here.</p>
+        <h6>User's name</h6>
+        <p>Text goes here.</p>
+      </div>
       <hr>
       <h5>Cancel my account</h5>
       <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-      <%= link_to "Back", :back %>
-    </div>
+      </div>
   </div>
 </div>
-<br>
-<br>
+<%= link_to "Back", :back %>
+

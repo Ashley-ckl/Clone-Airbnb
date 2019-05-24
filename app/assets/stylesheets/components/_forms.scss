@@ -125,6 +125,9 @@
   position: relative;
   margin: 0 auto;
   width: 400px;
+  h4 {
+    margin-top: 20px;
+  }
   input[type="file"] {
     font-weight: bold;
     background-color: $funky-yellow;
@@ -134,9 +137,19 @@
     padding: 7px 10px;
     width: 120px;
   };
-  .funky-button-large {
+  .funky-button {
     margin-top: 20px;
     float: center;
   };
+}
+.comments-form {
+  h3 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  h6 {
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
 }
 
