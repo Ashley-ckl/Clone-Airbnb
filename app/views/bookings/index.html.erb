@@ -5,13 +5,15 @@
       <div class="funky-card-search">
         <h3><%= booking.space.name%></h3>
         <% if booking.status == "pending" %>
-          <a class="pending"><%= booking.status%></a>
+          <p class="pending"><%= booking.status%></p>
         <% elsif booking.status == "accepted" %>
-          <a class="accepted"><%= booking.status%></a>
+          <p class="accepted"><%= booking.status%></p>
         <% elsif booking.status == "rejected" %>
-          <a class="rejected"><%= booking.status%></a>
+         <p class="rejected"><%= booking.status%></p>
         <% end %>
+          <%= link_to space_path(booking.space) do %>
         <%= cl_image_tag booking.space.photo %>
+        <% end %>
         <div class="funky-card-search-info">
           <div>
             <h4><%= booking.hours%> hours</h4>
@@ -32,18 +34,20 @@
       <div class="funky-card-search">
         <h3><%= booking.space.name%></h3>
         <% if booking.status == 'pending' %>
-          <div class="confirm-links">
-            <a><%= link_to "Accept", accept_booking_path(booking), method: :patch %></a>
-            <a><%= link_to "Reject", reject_booking_path(booking), method: :patch %></a>
+          <div class="d-inline-flex">
+            <p id="accept"><%= link_to "accept", accept_booking_path(booking), method: :patch %></p>
+            <p id="reject"><%= link_to "reject", reject_booking_path(booking), method: :patch %></p>
           </div>
         <% else %>
           <% if booking.status == 'accepted' %>
-            <a class="accepted"><%= booking.status%></a>
+            <p class="accepted"><%= booking.status%></p>
           <% elsif booking.status == 'rejected' %>
-            <a class="rejected"><%= booking.status%></a>
+            <p class="rejected"><%= booking.status%></p>
           <% end %>
         <% end %>
+        <%= link_to space_path(booking.space) do %>
         <%= cl_image_tag booking.space.photo %>
+        <% end %>
         <div class="funky-card-search-info">
           <div>
             <h4><%= booking.hours%> hours</h4>
