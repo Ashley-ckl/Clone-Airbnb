@@ -5,7 +5,11 @@
     <div class="funky-card">
       <div class="funky-card-avatar">
         <h2><%= @space.name %></h2>
+      <% if current_user.avatar.url.nil? %>
         <a><%= image_tag "avatar.jpg", class: "avatar" %></a>
+      <% else %>
+        <a><%= cl_image_tag @space.user.avatar, class: "avatar" %></a>
+      <% end %>
       </div>
       <P><%= @space.location %></P>
       <hr>
