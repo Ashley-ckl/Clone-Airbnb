@@ -7,7 +7,7 @@
   <div class="funky-cards-grid">
     <% @bookings_for_my_events.each do |booking| %>
       <div class="funky-card-search">
-        <h3><%= booking.space.name%></h3>
+        <h3><%= booking.space.name%>: <%= booking.status%></h3>
         <p><%= cl_image_tag booking.space.photo %></p>
         <div class="funky-card-search-info">
           <div>
@@ -26,7 +26,14 @@
   <div class="funky-cards-grid">
     <% @bookings_for_my_spaces.each do |booking| %>
       <div class="funky-card-search">
-        <h3><%= booking.space.name%></h3>
+        <h3><%= booking.space.name%>
+        <% if booking.status == 'pending' %>
+          <button><%= link_to "Accept", accept_booking_path(booking), method: :patch %></button>
+           <button><%= link_to "Reject", reject_booking_path(booking), method: :patch %></button>
+        <% else %>
+          <strong><h4><%= booking.status%></h4></strong>
+        <% end %></h3>
+        <br>
         <p><%= cl_image_tag booking.space.photo %></p>
         <div class="funky-card-search-info">
           <div>
@@ -39,3 +46,4 @@
       </div>
   </div>
 </div>
+
