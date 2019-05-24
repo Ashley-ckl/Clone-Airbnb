@@ -17,13 +17,29 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.space = @space
     @booking.host =  @space.user
-    @booking.total_price = @space.price_per_hour * @booking.hours
     authorize(@booking)
     if @booking.save
+      @booking.total_price = @space.price_per_hour * @booking.hours
       redirect_to new_booking_payment_path(@booking)
     else
-      render :new
+      render "spaces/show"
     end
+  end
+
+  def accept
+    @booking = Booking.find(params[:id])
+    @booking.status = "accepted"
+    @booking.save
+    authorize(@booking)
+    redirect_to bookings_path
+  end
+
+  def reject
+    @booking = Booking.find(params[:id])
+    @booking.status = "rejected"
+    @booking.save
+    authorize(@booking)
+    redirect_to bookings_path
   end
 
   private
@@ -33,6 +49,6 @@ class BookingsController < ApplicationController
   end
 
   def strong_booking_params
-    params.require(:booking).permit(:start_date, :start_time, :hours)
+    params.require(:booking).permit(:start_date, :start_time, :hours, :status)
   end
 end

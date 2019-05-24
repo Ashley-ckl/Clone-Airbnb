@@ -5,5 +5,5 @@ class Booking < ApplicationRecord
   validates :start_date, presence: true
   validates :start_time, presence: true
   validates :hours, presence: true
-  validates :status, presence: true, inclusion: { in: ['pending', 'confirmed', 'declined']}
+  validates :status, presence: true, inclusion: { in: ['pending', 'accepted', 'rejected']}
 end

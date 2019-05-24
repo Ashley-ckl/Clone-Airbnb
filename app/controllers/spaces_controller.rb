@@ -35,7 +35,7 @@ class SpacesController < ApplicationController
     end
     authorize(@results)
     if params[:location].present?
-      @results = @results.where("location ILIKE ?", params[:location])
+      @results = Space.near(params[:location], 10)
     end
     if params[:capacity].present?
       @results = @results.where("capacity = ?", params[:capacity])

@@ -11,6 +11,10 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create]
   end
   resources :bookings, only: [:index] do
+     member do
+        patch 'accept'
+        patch 'reject'
+      end
     resources :payments, only: [:new, :create]
   end
 
