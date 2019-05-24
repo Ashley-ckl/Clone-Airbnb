@@ -48,3 +48,14 @@
     border: 1px solid $funky-black-light;
   }
 }
+.search-container {
+  display: flex;
+  .search-container-left {
+    width: 700px;
+  };
+  .search-container-right {
+    padding-top: 20px;
+    margin-left: 30px;
+    flex-grow: 1;
+  }
+}

@@ -40,8 +40,6 @@
     margin: 0;
   };
 }
-
-
 .funky-cards-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -57,4 +55,9 @@
     width: 100%;
     object-fit: cover;
   };
+}
+.funky-cards-search-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
 }
