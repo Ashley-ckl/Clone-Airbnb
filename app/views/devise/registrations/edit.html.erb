@@ -4,7 +4,7 @@
       <% if current_user.avatar.url.nil? %>
         <%= image_tag 'avatar.jpg', alt: "avatar", class: "avatar-large" %>
       <% else %>
-        <%= image_path current_user.avatar, alt: "avatar", class: "avatar-large" %>
+        <%= cl_image_tag current_user.avatar, alt: "avatar", class: "avatar-large" %>
       <% end %>
       <br>
       <div class="profile-form">
@@ -50,7 +50,7 @@
       </div>
     </div>
     <div class= "profile-right">
-      <h1>Hello, I am <%= @user.first_name %></h1>
+      <h1>Hello <%= @user.first_name %>!</h1>
       <hr>
       <h5>Cancel my account</h5>
       <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
