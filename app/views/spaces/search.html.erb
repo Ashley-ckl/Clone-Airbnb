@@ -1,32 +1,37 @@
 <div class="funky-container">
-  <h2 class="header">Where to book</h2>
-  <div class="funky-cards-grid">
-      <% @results.each do |space| %>
-       <div class="funky-card-search">
-        <%= link_to space_path(space) do %>
-          <%= cl_image_tag space.photo %>
-           <div class="funky-card-search-info">
-              <div>
-                <h3><%= space.location %></h3>
-                <h2><%= space.name %></h2>
-                <p><%= space.capacity %></p>
-                <p>$<%= space.price_per_hour %>/hour</p>
-              </div>
-            </div>
-          <% end %>
-     </div>
-    <% end %>
-  </div>
-  <div
-  id="map"
-  style="width: 100%;
-  height: 600px;
-  margin-top: 20px;
-  border-radius: 5px;"
-  data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-></div>
+  <h2>Where to book</h2>
+  <div class="search-container">
+    <div class="search-container-left">
+      <div class="funky-cards-search-grid">
+          <% @results.each do |space| %>
+           <div class="funky-card-search">
+            <%= link_to space_path(space) do %>
+              <%= cl_image_tag space.photo %>
+               <div class="funky-card-search-info">
+                  <div>
+                    <h3><%= space.location %></h3>
+                    <h2><%= space.name %></h2>
+                    <p><%= space.capacity %></p>
+                    <p>$<%= space.price_per_hour %>/hour</p>
+                  </div>
+                </div>
+              <% end %>
+         </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="search-container-right">
+      <div
+      id="map"
+      style="width: 100%;
+      height: 950px;
+      border-radius: 5px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    ></div>
 
-  <br>
-    <%= link_to 'Back', root_path %>
+      <br>
+        <%= link_to 'Back', root_path %>
+    </div>
+  </div>
 </div>
