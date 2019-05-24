@@ -10,8 +10,10 @@
           <a class="accepted"><%= booking.status%></a>
         <% elsif booking.status == "rejected" %>
           <a class="rejected"><%= booking.status%></a>
-        <% end %>
+          <% end %>
+          <%= link_to space_path(booking.space) do %>
         <%= cl_image_tag booking.space.photo %>
+        <% end %>
         <div class="funky-card-search-info">
           <div>
             <h4><%= booking.hours%> hours</h4>
@@ -43,7 +45,9 @@
             <a class="rejected"><%= booking.status%></a>
           <% end %>
         <% end %>
+        <%= link_to space_path(booking.space) do %>
         <%= cl_image_tag booking.space.photo %>
+        <% end %>
         <div class="funky-card-search-info">
           <div>
             <h4><%= booking.hours%> hours</h4>
