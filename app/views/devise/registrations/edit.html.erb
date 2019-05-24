@@ -50,9 +50,9 @@
     </div>
     <div class= "profile-right">
       <h1>Hello, <%= @user.first_name %></h1>
-      <%= link_to 'See my bookings' %>
+      <%= link_to "See my bookings", bookings_path %>
       <br>
-      <%= link_to 'See my spaces' %>
+      <%= link_to "See my spaces", bookings_path(@booking, anchor: "booked-spaces") %>
       <hr>
       <div class="comments-form">
         <h3>Comments</h3>
