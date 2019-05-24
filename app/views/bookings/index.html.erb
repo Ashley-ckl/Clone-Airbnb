@@ -5,11 +5,11 @@
       <div class="funky-card-search">
         <h3><%= booking.space.name%></h3>
         <% if booking.status == "pending" %>
-          <p class="pending"><%= booking.status%></p>
+          <a class="pending"><%= booking.status%></a>
         <% elsif booking.status == "accepted" %>
-          <p class="accepted"><%= booking.status%></p>
+          <a class="accepted"><%= booking.status%></a>
         <% elsif booking.status == "rejected" %>
-          <p class="rejected"><%= booking.status%></p>
+          <a class="rejected"><%= booking.status%></a>
         <% end %>
         <%= cl_image_tag booking.space.photo %>
         <div class="funky-card-search-info">
@@ -38,9 +38,9 @@
           </div>
         <% else %>
           <% if booking.status == 'accepted' %>
-            <p class="accepted"><%= booking.status%></p>
+            <a class="accepted"><%= booking.status%></a>
           <% elsif booking.status == 'rejected' %>
-            <p class="rejected"><%= booking.status%></p>
+            <a class="rejected"><%= booking.status%></a>
           <% end %>
         <% end %>
         <%= cl_image_tag booking.space.photo %>
