@@ -40,13 +40,8 @@
     margin: 0;
   };
 }
-
-.header{
-  margin-left: 30px;
-}
 .funky-cards-grid {
   display: grid;
-  margin: 30px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
 }
