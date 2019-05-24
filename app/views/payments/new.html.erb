@@ -7,8 +7,7 @@
       <%= cl_image_tag @booking.space.photo %>
       <br>
       <br>
-      <h6><%= @booking.start_date%></h6>
-      <h6><%= @booking.start_time%></h6>
+      <h6><%= @booking.start_date.strftime("%A, %b %d")%></h6>
       <h6><%= @booking.hours%> hours</h6>
     </div>
     <hr>
@@ -27,7 +26,7 @@
       <input maxlength="3" type="text" class="form-control">
       <label>Coupon code</label>
       <input type="text" class="form-control">
-      <button class="funky-button-large" id="sweetalert"> "Pay now"</button>
+      <button class="funky-button-large" id="sweetalert">Pay now</button>
     </form>
   </div>
   <br>

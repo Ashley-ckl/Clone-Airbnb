@@ -17,8 +17,7 @@
         <div class="funky-card-search-info">
           <div>
             <h4><%= booking.hours%> hours</h4>
-            <h6><%= booking.start_date%></h6>
-            <h6><%= booking.start_time%></h6>
+            <h6><%= booking.start_date.strftime("%A, %b %d") %></h6>
           </div>
         </div>
       </div>
@@ -51,8 +50,7 @@
         <div class="funky-card-search-info">
           <div>
             <h4><%= booking.hours%> hours</h4>
-            <h6><%= booking.start_date%></h6>
-            <h6><%= booking.start_time%></h6>
+             <h6><%= booking.start_date.strftime("%A, %b %d") %></h6>
           </div>
         </div>
       </div>
