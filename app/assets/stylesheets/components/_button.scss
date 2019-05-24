@@ -25,3 +25,31 @@
   padding: 10px 125px;
   width: 430px;
 }
+.pending {
+  font-weight: bold;
+  background-color: #3D5A80;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 5px;
+  width: 70px;
+}
+.rejected {
+  font-weight: bold;
+  background-color: #D52941;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 5px;
+  width: 70px;
+}
+.accepted {
+  font-weight: bold;
+  background-color: $funky-yellow;
+  color: $funky-purple;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 5px;
+  width: 70px;
+}
+
