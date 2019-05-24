@@ -1,7 +1,7 @@
  <h2>Your reservation details</h2>
   <p><%= @booking.space.name%></p>
   <p><%= cl_image_tag @booking.space.photo %></p>
-  <p>Start date & time: <%= @booking.start_date%></p>
+  <p>Start date & time: <%= @booking.start_date%>, <%= @booking.start_time%></p>
   <p><%= @booking.hours%> /hours</p>
 
   <h4>Your total price is $<%= @booking.total_price%>.</h4>
