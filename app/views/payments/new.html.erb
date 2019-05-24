@@ -1,18 +1,33 @@
- <h2>Your reservation details</h2>
-  <p><%= @booking.space.name%></p>
-  <p><%= cl_image_tag @booking.space.photo %></p>
-  <p>Start date & time: <%= @booking.start_date%>, <%= @booking.start_time%></p>
-  <p><%= @booking.hours%> /hours</p>
-
-  <h4>Your total price is $<%= @booking.total_price%>.</h4>
- <form action="/spaces/search" method="GET" class="funky-form">
-        <h2>Enter your credit card details below</h2>
-        <label>Card number</label>
-        <input  type="text" class="form-control" placeholder="****************">
-        <label>Expiry date</label>
-          <input type="month" class="form-control">
-        <label>CVC</label>
-          <input type="text" class="form-control">
-        <button value="Search" class="funky-button">Submit Payment</button>
-        </div>
-</form>
+<div class="funky-container">
+  <div class="pay-form">
+    <h2><%= @booking.space.name%></h2>
+    <div class="funky-card-pay">
+      <%= cl_image_tag @booking.space.photo %>
+      <br>
+      <br>
+      <h6><%= @booking.start_date%></h6>
+      <h6><%= @booking.start_time%></h6>
+      <h6><%= @booking.hours%> hours</h6>
+    </div>
+    <hr>
+    <div class="d-flex justify-content-between">
+      <h3>Total price</h3>
+      <h3>$<%= @booking.total_price%></h3>
+    </div>
+    <hr>
+    <h5>Enter your credit card details</h5>
+    <form action="/spaces/search" method="GET" class="pay-form-bottom">
+      <label>Card number</label>
+      <input  type="text" class="form-control" placeholder="****************">
+      <label>Expiry date</label>
+      <input type="month" class="form-control">
+      <label>CVC</label>
+      <input type="text" class="form-control">
+      <label>Coupon code</label>
+      <input type="text" class="form-control">
+      <button value="Search" class="funky-button-large">Pay</button>
+    </form>
+  </div>
+  <br>
+  <br>
+</div>

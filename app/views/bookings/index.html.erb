@@ -9,25 +9,31 @@
       <div class="funky-card-search">
         <h3><%= booking.space.name%></h3>
         <p><%= cl_image_tag booking.space.photo %></p>
-        <div class="funky-card-searc-info">
-          <h6><%= booking.start_date%></h6>
-          <h4><%= booking.hours%> hours</h4>
+        <div class="funky-card-search-info">
+          <div>
+            <h4><%= booking.hours%> hours</h4>
+            <h6><%= booking.start_date%></h6>
+            <h6><%= booking.start_time%></h6>
+          </div>
         </div>
-      <% end %>
       </div>
+      <% end %>
   </div>
   <br>
   <hr>
   <br>
-  <h2>My spaces</h2>
+  <h2>My booked spaces</h2>
   <div class="funky-cards-grid">
     <% @bookings_for_my_spaces.each do |booking| %>
       <div class="funky-card-search">
         <h3><%= booking.space.name%></h3>
         <p><%= cl_image_tag booking.space.photo %></p>
-        <div class="funky-card-searc-info">
-          <h6><%= booking.start_date%></h6>
-          <h4><%= booking.hours%> hours</h4>
+        <div class="funky-card-search-info">
+          <div>
+            <h4><%= booking.hours%> hours</h4>
+            <h6><%= booking.start_date%></h6>
+            <h6><%= booking.start_time%></h6>
+          </div>
         </div>
       <% end %>
       </div>
